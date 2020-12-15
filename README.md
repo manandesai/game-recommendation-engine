@@ -6,7 +6,7 @@ The goal of this project is to make appropriate recommendations to gamers.
 
 This is accomplished in 3 different ways: User-based Collaborative Filtering, Item-based Collaborative Filtering, and Matrix Factorization.
 
-Of course, the data must be preprocessed first. The original data is structured such that a one user-game pair can have 2 rows: one row that says he/she purchased the game and one row that says how many hours he/she played the game. Here, I am really only interesting in hours played so we can remove the purchase data. There were a lot of extreme outliers (think a couple users playing a few games for a very long time). I chose to log normalize the data so that the distribution looked mostly normal.
+The original data is structured such that a one user-game pair can have 2 rows: one row that says he/she purchased the game and one row that says how many hours he/she played the game. Here, I am really only interesting in hours played so we can remove the purchase data. There were a lot of extreme outliers (think a couple users playing a few games for a very long time). I chose to log normalize the data so that the distribution looked mostly normal.
 
 I was then able to begin a User-based Collaborative Filtering approach. Now, collaborative filtering is usually done with ratings, where users rate movies/games/songs/shows/etc out of 5 or maybe 10. However, I do not have access to rating data, just hours played. So, I will use hours played as the metric. While this may bring some challenges, it should be able to serve in a pretty similar manner as ratings. One key assumption is being made here: the more a user plays a game, the more they like the game. This may not be completely accurate every time, but it should be good enough.
 
